@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>control web</title>
+</head>
+
+<script>
+
+sessionStorage.setItem("token", {{.Token}});
+
+// Retrieve token
+const token = sessionStorage.getItem("token");
+
+alert(token);
+
+// Delete token
+//sessionStorage.removeItem("token")
+
+
+
+</script>
+
+<body>
+    <h1>Your Token: {{.Token}}</h1>
+    <ul>
+        {{range .Menus}}
+        <li><a href="{{.FuncUrl}}">{{.FuncName}}</a></li>
+        {{end}}
+    </ul>
+
+
+</body>
+</html>
