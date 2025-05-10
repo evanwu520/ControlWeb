@@ -1,10 +1,21 @@
+<!DOCTYPE html>
 <html>
+
 <head>
-    <title>control web</title>
+    <title>HTML Login Form</title>
+    <link rel="stylesheet" href="/css/login.css">
 </head>
 
 <body>
- <form action="/user/login" method="POST">
+    <div class="main">
+        <h1>Control Web</h1>
+        <h3>Enter your login credentials</h3>
+
+         <div>
+               {{.Msg}}
+         </div>
+
+        <form action="/user/login" method="POST">
             <label for="Account">
                 Account:
             </label>
@@ -17,11 +28,14 @@
             <input type="password" id="password" name="password" 
                 placeholder="Enter your Password" required>
 
-            <div>
+            <div class="wrap">
                 <button type="submit">
                     Submit
                 </button>
             </div>
         </form>
+        
+    </div>
 </body>
+
 </html>

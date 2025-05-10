@@ -32,6 +32,9 @@ func (bonusController) Reward(c *gin.Context) {
 		fmt.Println(err)
 	}
 
+	// TODO 贈獎
+
+	// save record
 	bonusModel := models.NewBonusRankModel()
 
 	record := &models.BonusRank{}
@@ -48,8 +51,8 @@ func (bonusController) Reward(c *gin.Context) {
 }
 
 type RewardRecordsReq struct {
-	StartTime   int64  `json:"startTime"`
-	EndTime     int64  `json:"endTime"`
+	StartTime   int64  `form:"startTime"`
+	EndTime     int64  `form:"endTime"`
 	AccountName string `form:"accountName"`
 }
 
